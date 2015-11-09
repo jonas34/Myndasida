@@ -1,4 +1,4 @@
-angular.module('myLogin', [].config(['$routeProvider','$locationProvider',
+angular.module('myLoginApp', [].config(['$routeProvider','$locationProvider',
   function($routeProvider, $locationProvider) {
       $routeProvider
       .when('/login', {
