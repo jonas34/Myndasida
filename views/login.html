@@ -1,5 +1,9 @@
-<form action="/homepage">
-  <input type="text"></input>
-  <button type="Submit()">Submit</button>
+<form action="/homepage" method="POST">
+  Username: <input type="text"></input>
+  <br></br>
+  Password: <input type="password"></input>
+  <br></br>
+  <input type="submit" ng-click="Submit()"></input>
+  <button ng-click="Cancel()">Cancel</button>
 
 </form>
