@@ -4,10 +4,13 @@ form {
   text-align: center;
   color: #FFFFFF;
 }
+.SignUp {
+  float: right;
+}
 h1 {
   text-align: center;
   font-family: 'Exo';
-  COLOR: #AAAAFF;
+  color: #AAAAFF;
 }
 body {
   background-image: url(http://i.imgur.com/c9HtRon.jpg);
@@ -15,5 +18,5 @@ body {
 .prompt{
   font-family: 'Exo';
   background-color: #000000;
-  color: #0000FF
+  color: #FFFFFF;
 }
