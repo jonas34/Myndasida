@@ -6,6 +6,10 @@ var app = angular.module('myLoginApp', ['ngRoute']).config(['$routeProvider','$l
         templateUrl: 'views/login.html',
         controller: 'LoginController'
       })
+      .when('/signup', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterController'
+      })
       .when('/register', {
         templateUrl: 'views/register.html',
         controller: 'RegisterController'
