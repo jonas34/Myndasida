@@ -12,7 +12,7 @@ class MyUserManager(BaseUserManager):
         """
         if not email:
             raise ValueError('Notendur þurfa að hafa email address')
-    
+
         user = self.model(
             email=self.normalize_email(email),
             date_of_birth=dateofbirth,
@@ -77,3 +77,14 @@ class MyUser(AbstractBaseUser):
         "Is the user a member of staff?"
 
         return self.is_admin
+
+class Photos(models.Model):
+    url = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
+    desc = models.CharField(max_length=500)
+    author = models.ForeignKey(MyUser)
+
+class Comments(models.Model):
+    photo = models.ForeignKey(Photos)
+    text = models.CharField(max_length=500)
+    author = models.ForeignKey(MyUser)

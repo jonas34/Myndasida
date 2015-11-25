@@ -1,7 +1,11 @@
 from django.shortcuts import render
-from .models import MyUser
+from .models import MyUser, Photos
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.models import User
+import json
+from django.core.serializers.json import DjangoJSONEncoder
+from django.core import serializers
+
 
 # Create your views here.
 def register(request):
@@ -14,3 +18,9 @@ def register(request):
     u = MyUser.objects.create_user(email, dateofbirth, password)
     u.save()
     return HttpResponse("you are in register")
+
+def photos(request):
+    photos = Photos.objects.all()
+    photos = serializers.serialize("json", photos)
+    photos_json = json.dumps(list(photos), cls=DjangoJSONEncoder)
+    return HttpResponse(photos)
