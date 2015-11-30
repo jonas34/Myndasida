@@ -14,6 +14,14 @@ var app = angular.module('myLoginApp', ['ngRoute']).config(['$routeProvider','$l
         templateUrl: 'views/register.html',
         controller: 'RegisterController'
       })
+      .when('/homepage', {
+        controller: "MainController",
+        templateUrl: "views/homepage.html"
+      })
+      .when('/comment/:id', {
+        controller: 'CommentController',
+        templateUrl: 'views/comment.html'
+      })
       .otherwise({
         redirectTo: '/login'
       });

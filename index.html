@@ -2,10 +2,12 @@
 <html>
   <head>
     <link href="css/app.css" rel="stylesheet" />
+    <link href="css/main1.css" rel="stylesheet" />
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/angular-route.min.js"></script>
     <a href="#/login"><button class="LogIn prompt" ng-click="LogIn()" type="login">Log In</button></a>
-    <a href="#/signup"><button class="SignUp prompt" ng-click="SignUp()" type="register">Sign Up</button><br/></a>
+    <a href="#/signup"><button class="SignUp prompt" ng-click="SignUp()" type="register">Sign Up</button></a>
+    <a href="#/homepage"><button class="Home prompt" ng-click="Home()" type="homepage">Home</button><br/></a>
   </head>
 
   <body ng-app="myLoginApp">
@@ -30,6 +32,14 @@
     <!-- controller -->
     <script src="js/controllers/LoginController.js"></script>
     <script src="js/controllers/RegisterController.js"></script>
+    <script src="js/controllers/CommentController.js"></script>
+    <script src="js/controllers/MainController.js"></script>
+
+    <!-- services -->
+    <script src="js/services/photos.js"></script>
+
+    <!-- directives -->
+    <script src="js/directives/searchButton.js"></script>
 
 
   </body>

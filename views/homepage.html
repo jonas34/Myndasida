@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<h1 class="titill">Myndasida FSS</h1>
+<body>
+  <search-button></search-button>
+  <div class="post" ng-repeat="mynd in myndir.photos">
+    <div class="titill">
+      {{ mynd.title }}
+    </div>
+    <div class="mynd">
+      <img src="{{ mynd.url }}"></img>
+    </div>
+    <div class="lysing">
+      {{ mynd.desc }}
+    </div>
+    <p></p>
+    <a href="#/comment/{{ $index }}" class="commentaTakki">Comments</a>
+    <br></br>
+  </div>
+</body>

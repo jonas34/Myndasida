@@ -82,7 +82,7 @@ DATABASES = {
     }
 }
 
-
+CORS_ORIGIN_ALLOW_ALL = True
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 

@@ -13,6 +13,11 @@ form {
   float: right;
   display: block;
 }
+.Home {
+  float: right;
+  display: block;
+  top: 50px;
+}
 h1 {
   text-align: center;
   font-family: 'Exo';

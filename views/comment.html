@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+
+<body>
+  <div class="post">
+    <div class="titill">
+      {{ mynd.title }}
+    </div>
+    <div class="mynd">
+      <img src="{{ mynd.url }}"></img>
+    </div>
+    <div class="lysing">
+      {{ mynd.desc }}
+    </div>
+  </div>
+  <br></br>
+  <form action="http://localhost:8000/myndir/postcomment/" method="GET">
+    <input type="hidden" value="{{photoId}}" name="id"></input>
+    <textarea id="comment" name="comment" type ="text"></textarea>
+    <input type="submit"></input>
+  </form>
+</body>
