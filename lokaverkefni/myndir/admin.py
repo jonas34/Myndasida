@@ -6,8 +6,10 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
 from myndir.models import MyUser
 from myndir.models import Photos
+from myndir.models import Comments
 
 admin.site.register(Photos)
+admin.site.register(Comments)
 class UserCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
     fields, plus a repeated password."""

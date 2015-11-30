@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import MyUser, Photos
+from .models import MyUser, Photos, Comments
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
@@ -37,5 +37,9 @@ def log_in(request):
 def photos(request):
     photos = Photos.objects.all()
     photos = serializers.serialize("json", photos)
-    photos_json = json.dumps(list(photos), cls=DjangoJSONEncoder)
     return HttpResponse(photos)
+
+def comments(request):
+    comments = Comments.objects.all()
+    comments = serializers.serialize("json", comments)
+    return HttpResponse(comments)
