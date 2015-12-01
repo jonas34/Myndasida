@@ -44,10 +44,14 @@ def photos(request):
 def comments(request):
     comments = Comments.objects.all()
     comments = serializers.serialize("json", comments)
-    return HttpResponse(comments)
+    response = HttpResponse(comments)
+    response["Access-Control-Allow-Origin"] = "*"
+    return response
 
 def postcomment(request):
     comment = request.GET['comment']
     photoId = request.GET['id']
     photos = Photos.objects.get(pk=photoId)
-    c = Comments.objects.create(text=comment, photo=photos)
+    user = MyUser.objects.get(pk=photos.author.id)
+    c = Comments.objects.create(text=comment, photo=photos, author=user)
+    return HttpResponse("comment posted")

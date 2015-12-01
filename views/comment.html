@@ -13,6 +13,9 @@
     </div>
   </div>
   <br></br>
+  <div ng-repeat="comment in comments">
+    <div class="post">{{ comment.fields.text }}</div>
+  </div>
   <form action="http://localhost:8000/myndir/postcomment/" method="GET">
     <input type="hidden" value="{{photoId}}" name="id"></input>
     <textarea id="comment" name="comment" type ="text"></textarea>
