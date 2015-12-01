@@ -3,15 +3,15 @@
 <h1 class="titill">Myndasida FSS</h1>
 <body>
   <search-button></search-button>
-  <div class="post" ng-repeat="mynd in myndir.photos">
+  <div class="post" ng-repeat="mynd in myndir">
     <div class="titill">
-      {{ mynd.title }}
+      {{ mynd.fields.title }}
     </div>
     <div class="mynd">
-      <img src="{{ mynd.url }}"></img>
+      <img src="{{ mynd.fields.url }}"></img>
     </div>
     <div class="lysing">
-      {{ mynd.desc }}
+      {{ mynd.fields.desc }}
     </div>
     <p></p>
     <a href="#/comment/{{ $index }}" class="commentaTakki">Comments</a>
